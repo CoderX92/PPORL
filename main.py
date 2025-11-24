@@ -287,3 +287,4 @@ if _name_ == "_main_":
     #model = RecurrentPPO('MlpLstmPolicy', env, verbose=1, tensorboard_log=logs, n_steps=4096)
     model = PPO('MlpPolicy', env, learning_rate=0.00065, batch_size=128, verbose=1, tensorboard_log=logs,device='cuda',n_steps=16384)
     model.learn(total_timesteps=6000000)
+    model.save('waed')
